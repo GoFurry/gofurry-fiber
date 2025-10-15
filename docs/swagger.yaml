@@ -1,0 +1,48 @@
+definitions:
+  common.ResultData:
+    properties:
+      code:
+        type: integer
+      data: {}
+    type: object
+  models.UserLoginRequest:
+    properties:
+      name:
+        maxLength: 36
+        minLength: 3
+        type: string
+      password:
+        type: string
+    required:
+    - name
+    - password
+    type: object
+info:
+  contact: {}
+  description: GoFurry-Fiber
+  title: GoFurry-Fiber
+  version: v1.0.0
+paths:
+  /api/system/user/login:
+    post:
+      consumes:
+      - application/json
+      description: 登录
+      parameters:
+      - description: 请求body
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserLoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/common.ResultData'
+      summary: 登录请求
+      tags:
+      - System-user
+swagger: "2.0"
