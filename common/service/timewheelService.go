@@ -8,7 +8,7 @@ package service
 
 import (
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/common/log"
+	"github.com/GoFurry/gofurry-fiber/common/log"
 	"github.com/rfyiamcool/go-timewheel"
 	"time"
 )

@@ -7,11 +7,11 @@ package service
  */
 
 import (
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/common/abstract"
-	"github.com/Gofurry/gofurry-fiber/common/log"
-	"github.com/Gofurry/gofurry-fiber/common/util"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common/abstract"
+	"github.com/GoFurry/gofurry-fiber/common/log"
+	"github.com/GoFurry/gofurry-fiber/common/util"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"github.com/tidwall/gjson"
 	"time"
 )

@@ -3,8 +3,8 @@ package middleware
 import (
 	"bytes"
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"github.com/corazawaf/coraza/v3"
 	"github.com/corazawaf/coraza/v3/experimental"
 	"github.com/corazawaf/coraza/v3/types"

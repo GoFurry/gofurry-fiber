@@ -9,7 +9,7 @@ package log
 import (
 	"bytes"
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"github.com/goccy/go-json"
 	"github.com/sirupsen/logrus"
 	"runtime"

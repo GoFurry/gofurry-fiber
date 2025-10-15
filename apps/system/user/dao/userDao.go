@@ -2,9 +2,9 @@ package dao
 
 import (
 	"errors"
-	"github.com/Gofurry/gofurry-fiber/apps/system/user/models"
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/common/abstract"
+	"github.com/GoFurry/gofurry-fiber/apps/system/user/models"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common/abstract"
 	"gorm.io/gorm"
 )
 

@@ -1,8 +1,8 @@
 package models
 
 import (
-	"github.com/Gofurry/gofurry-fiber/common/abstract"
-	cm "github.com/Gofurry/gofurry-fiber/common/models"
+	"github.com/GoFurry/gofurry-fiber/common/abstract"
+	cm "github.com/GoFurry/gofurry-fiber/common/models"
 )
 
 const TableNameGfUser = "gf_user"

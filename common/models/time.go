@@ -9,7 +9,7 @@ package models
 import (
 	"database/sql/driver"
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common"
 	"time"
 )
 

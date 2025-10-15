@@ -3,7 +3,7 @@ package env
 import (
 	"errors"
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common"
 	"gopkg.in/yaml.v2"
 	"os"
 )

@@ -1,4 +1,4 @@
-module github.com/Gofurry/gofurry-fiber
+module github.com/GoFurry/gofurry-fiber
 
 go 1.23.0
 

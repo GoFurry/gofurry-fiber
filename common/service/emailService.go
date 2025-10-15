@@ -8,9 +8,9 @@ package service
 
 import (
 	"fmt"
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/common/util"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common/util"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"gopkg.in/gomail.v2"
 	"regexp"
 )

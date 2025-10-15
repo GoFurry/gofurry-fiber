@@ -9,9 +9,9 @@ package routers
 import (
 	"sync"
 
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/middleware"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/middleware"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"github.com/gofiber/contrib/swagger"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"

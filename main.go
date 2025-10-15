@@ -7,10 +7,10 @@ import (
 	"runtime/debug"
 	"syscall"
 
-	"github.com/Gofurry/gofurry-fiber/common"
-	cs "github.com/Gofurry/gofurry-fiber/common/service"
-	"github.com/Gofurry/gofurry-fiber/roof/env"
-	routers "github.com/Gofurry/gofurry-fiber/router"
+	"github.com/GoFurry/gofurry-fiber/common"
+	cs "github.com/GoFurry/gofurry-fiber/common/service"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
+	routers "github.com/GoFurry/gofurry-fiber/router"
 	"github.com/gofiber/fiber/v2/log"
 	"github.com/kardianos/service"
 )

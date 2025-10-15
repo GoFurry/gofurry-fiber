@@ -1,6 +1,6 @@
 package abstract
 
-import "github.com/Gofurry/gofurry-fiber/common/util"
+import "github.com/GoFurry/gofurry-fiber/common/util"
 
 /*
  * @Desc: 公共模型

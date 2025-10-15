@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Gofurry/gofurry-fiber/roof/env"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

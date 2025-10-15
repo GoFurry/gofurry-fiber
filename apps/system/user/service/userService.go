@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/Gofurry/gofurry-fiber/apps/system/user/models"
-	"github.com/Gofurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/apps/system/user/models"
+	"github.com/GoFurry/gofurry-fiber/common"
 )
 
 type userService struct{}

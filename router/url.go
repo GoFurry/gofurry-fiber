@@ -1,7 +1,7 @@
 package routers
 
 import (
-	user "github.com/Gofurry/gofurry-fiber/apps/system/user/controller"
+	user "github.com/GoFurry/gofurry-fiber/apps/system/user/controller"
 	"github.com/gofiber/fiber/v2"
 )
 

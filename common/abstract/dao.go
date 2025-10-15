@@ -2,9 +2,9 @@ package abstract
 
 import (
 	"errors"
-	"github.com/Gofurry/gofurry-fiber/common"
-	"github.com/Gofurry/gofurry-fiber/common/log"
-	database "github.com/Gofurry/gofurry-fiber/roof/db"
+	"github.com/GoFurry/gofurry-fiber/common"
+	"github.com/GoFurry/gofurry-fiber/common/log"
+	database "github.com/GoFurry/gofurry-fiber/roof/db"
 	"github.com/jackc/pgx/v5/pgconn"
 	"gorm.io/gorm"
 )
