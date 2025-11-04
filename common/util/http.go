@@ -8,15 +8,16 @@ package util
 
 import (
 	"crypto/tls"
+	"encoding/json"
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
-	"github.com/goccy/go-json"
 	"io"
 	"net/http"
 	"net/url"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 func GetByHttp(url string) (string, error) {
@@ -71,7 +72,7 @@ func PostByHttp(url, contentType string, params map[string]any) (string, error) 
 }
 
 // Get 请求头 参数 返回: string
-func GetByHttpWithParams(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration) (string, error) {
+func GetByHttpWithParams(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration, proxy *string) (string, error) {
 	// 构建表单
 	values := url.Values{}
 	for k, v := range params {
@@ -88,6 +89,13 @@ func GetByHttpWithParams(apiUrl string, headers map[string]string, params map[st
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
+
+	// 是否代理加速
+	if proxy != nil {
+		proxyURL, _ := url.Parse(*proxy)
+		transport.Proxy = http.ProxyURL(proxyURL)
+	}
+
 	client := &http.Client{
 		Transport: transport,
 		Timeout:   timeout,
@@ -123,7 +131,7 @@ func GetByHttpWithParams(apiUrl string, headers map[string]string, params map[st
 }
 
 // Get 请求头 参数 返回: *goquery.Document
-func GetByHttpWithParamsBackDoc(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration) (*goquery.Document, error) {
+func GetByHttpWithParamsBackDoc(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration, proxy *string) (*goquery.Document, error) {
 	// 构建表单
 	values := url.Values{}
 	for k, v := range params {
@@ -140,6 +148,13 @@ func GetByHttpWithParamsBackDoc(apiUrl string, headers map[string]string, params
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
+
+	// 是否代理加速
+	if proxy != nil {
+		proxyURL, _ := url.Parse(*proxy)
+		transport.Proxy = http.ProxyURL(proxyURL)
+	}
+
 	client := &http.Client{
 		Transport: transport,
 		Timeout:   timeout,
@@ -174,7 +189,7 @@ func GetByHttpWithParamsBackDoc(apiUrl string, headers map[string]string, params
 }
 
 // Post 请求头 参数 返回: string
-func PostByHttpWithParams(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration) (string, error) {
+func PostByHttpWithParams(apiUrl string, headers map[string]string, params map[string]string, timeout time.Duration, proxy *string) (string, error) {
 	// 构建表单
 	values := url.Values{}
 	for k, v := range params {
@@ -191,6 +206,13 @@ func PostByHttpWithParams(apiUrl string, headers map[string]string, params map[s
 	transport := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
+
+	// 是否代理加速
+	if proxy != nil {
+		proxyURL, _ := url.Parse(*proxy)
+		transport.Proxy = http.ProxyURL(proxyURL)
+	}
+
 	client := &http.Client{
 		Transport: transport,
 		Timeout:   timeout,
