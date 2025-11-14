@@ -14,18 +14,19 @@ import (
 	"encoding/hex"
 	"encoding/pem"
 	"fmt"
-	"github.com/GoFurry/gofurry-fiber/common"
-	cm "github.com/GoFurry/gofurry-fiber/common/models"
-	"github.com/GoFurry/gofurry-fiber/roof/env"
-	"github.com/bwmarrin/snowflake"
-	"github.com/golang-jwt/jwt/v5"
-	"github.com/pkg/errors"
 	"math/rand"
 	"net"
 	"os"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/GoFurry/gofurry-fiber/common"
+	cm "github.com/GoFurry/gofurry-fiber/common/models"
+	"github.com/GoFurry/gofurry-fiber/roof/env"
+	"github.com/bwmarrin/snowflake"
+	"github.com/golang-jwt/jwt/v5"
+	"github.com/pkg/errors"
 )
 
 var clusterId, _ = snowflake.NewNode(int64(env.GetServerConfig().ClusterId))
@@ -152,7 +153,7 @@ func GenerateRandomCode(length int) string {
 // JWT 密钥
 func Secret() jwt.Keyfunc {
 	return func(token *jwt.Token) (interface{}, error) {
-		return []byte(common.TOKEN_SECRET), nil
+		return []byte(env.GetServerConfig().Auth.JwtSecret), nil
 	}
 }
 
@@ -188,7 +189,7 @@ func NewToken(userId string, userName string) (string, error) {
 		},
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-	return token.SignedString([]byte(common.TOKEN_SECRET))
+	return token.SignedString([]byte(env.GetServerConfig().Auth.JwtSecret))
 }
 
 // 判断是否 IP
